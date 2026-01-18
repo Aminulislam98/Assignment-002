@@ -212,3 +212,60 @@ main {
 .subscribe-button:active {
   background-color: #06c5429a;
 }
+
+/* About the Podcast */
+.about-the-podcast-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 200px 120px 200px;
+  background-color: rgba(26, 11, 46, 1);
+}
+.about-the-podcast-head-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-the-podcast-header {
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 16px;
+}
+.about-the-podcast-description {
+  text-align: center;
+  line-height: 35px;
+  color: rgba(255, 255, 255, 0.782);
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: rgba(128, 128, 128, 0.126);
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.about-the-podcast-rating-container {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.about-the-podcast-rating-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.about-the-podcast-rating-card h3 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #00ff88;
+}
+.about-the-podcast-rating-card p {
+  color: rgba(255, 255, 255, 0.782);
+}
