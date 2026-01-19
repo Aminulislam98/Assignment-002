@@ -597,6 +597,23 @@ footer {
     text-align: center;
     line-height: 26px;
   }
+  .tech-wave-mike-new {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 1000px;
+    background-color: rgba(0, 255, 136, 1);
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    box-shadow: -0 3px 20px rgba(0, 255, 136, 0.589);
+    cursor: pointer;
+    transition:
+      color 0.3s,
+      background-color 0.3s,
+      transform 0.3s,
+      border 0.3s;
+  }
 
   /* In the (Spotify-subscribe-button-container), flex-wrap: wrap is used so that if the page is opened on a very small device, the buttons wrap and are positioned properly. */
 
@@ -635,12 +652,23 @@ footer {
     font-weight: 900;
     /* the font weight does not get same as the figma font weight as I already applied full weight */
   }
+  .about-the-podcast-rating-card p {
+    font-size: 14px;
+  }
+
+  .about-the-podcast-rating-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
   /* this is (why-choose-techWave-section)*/
   .why-choose-techWave-section {
     padding: 40px 20px;
   }
   .why-choose-techWave-header {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 16px;
   }
   .why-choose-techWave-container {
