@@ -296,9 +296,11 @@ hr {
   font-size: 3rem;
   font-weight: bolder;
   color: #00ff88;
+  cursor: pointer;
 }
 .about-the-podcast-rating-card p {
   color: rgba(255, 255, 255, 0.782);
+  cursor: pointer;
 }
 
 /* why-choose-techWave-section */
