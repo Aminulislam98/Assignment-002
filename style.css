@@ -286,8 +286,6 @@ hr {
 }
 .why-choose-techWave-container {
   max-width: 1200px;
-}
-.why-choose-techWave-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
@@ -337,4 +335,126 @@ hr {
   color: rgb(192, 192, 192);
   font-weight: 300;
   line-height: 24px;
+}
+
+/* featured-episodes-meet-the-host-section */
+.featured-episodes-meet-the-host-section {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(26, 11, 46, 1);
+  padding: 120px 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.featured-episodes-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 120px;
+}
+.featured-episodes-header,
+.meet-the-host-header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.featured-episodes-card {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(37, 13, 68, 1);
+  border-radius: 30px;
+  overflow: hidden;
+  /* I used overflow: hidden so the iframe stays inside the card and gets the same rounded corners. Otherwise, the iframe corners would stay mot rounded. */
+}
+
+.featured-episodes-card-yt-container {
+  max-width: 380px;
+}
+.featured-episodes-card-yt-container iframe {
+  width: 380px;
+  height: 214px;
+}
+.featured-episodes-card-details {
+  margin: 24px;
+}
+.featured-episodes-card-details-header {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.featured-episodes-card-details-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(192, 192, 192);
+  line-height: 24px;
+}
+.featured-episodes-card-time-container {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+.featured-episodes-card-time {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00ff88;
+}
+.meet-the-host-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Alex-Kumar-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(37, 13, 68, 1);
+  border-radius: 30px;
+  gap: 24px;
+}
+.Alex-Kumar-card-profile-photo {
+  width: 200px;
+}
+.Alex-Kumar-card-profile-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.alex-kumar {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.alex-kumar-details {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(192, 192, 192);
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.Alex-Kumar-social-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.Alex-Kumar-social-link-container div {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
