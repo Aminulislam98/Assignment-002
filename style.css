@@ -672,7 +672,7 @@ footer {
     margin-bottom: 16px;
   }
   .why-choose-techWave-container {
-    max-width: 1200px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -822,13 +822,12 @@ footer {
   .why-choose-techWave-section {
     padding: 40px 20px;
   }
+
   .why-choose-techWave-container {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    align-items: center;
     grid-template-areas: none;
-    gap: 30px;
   }
   .why-choose-techWave-header {
     font-size: 2rem;
@@ -841,7 +840,8 @@ footer {
     width: 100%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -886,5 +886,38 @@ footer {
     align-items: center;
     gap: 15px;
     margin: 32px 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .navbar-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+  .hamburger-logo-container {
+    display: none;
+  }
+  .about-the-podcast-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background-color: rgba(26, 11, 46, 1);
+  }
+  .why-choose-techWave-section {
+    padding: 60px 30px;
+  }
+  .featured-episodes-meet-the-host-section {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(26, 11, 46, 1);
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
