@@ -10,7 +10,8 @@
   font-style: normal;
 }
 /* This is header section */
-.hidden {
+/* this class for hamburger and it appear when screen size under 576px */
+.hamburger-logo-container {
   display: none;
 }
 
@@ -550,6 +551,11 @@ footer {
   .navbar-right-button {
     display: none;
   }
+
+  /* This hamburger-logo-container will appear when screen size is less than 576 px or 576px*/
+  .hamburger-logo-container {
+    display: flex;
+  }
   .hamburger-logo {
     display: flex;
     width: 24px;
@@ -919,5 +925,16 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .navbar-container {
+    padding: 30px 100px;
+  }
+  .why-choose-techWave-section {
+    padding: 120px 100px;
+  }
+  .featured-episodes-meet-the-host-section {
+    padding: 120px 100px;
   }
 }
