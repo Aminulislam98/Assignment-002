@@ -10,6 +10,9 @@
   font-style: normal;
 }
 /* This is header section */
+.hidden {
+  display: none;
+}
 
 header {
   max-width: 100%;
@@ -88,6 +91,12 @@ Additionally, I used transition: transform 0.3s ease to make the movement smooth
   width: 20px;
 }
 /* 
+this will be hidden when screen size is big */
+.hamburger-logo {
+  display: none;
+}
+
+/* 
 This is main content area */
 main {
   max-width: 1600px;
@@ -138,6 +147,16 @@ main {
   top: 12px;
   box-shadow: -0 3px 20px rgba(0, 255, 136, 0.589);
   cursor: pointer;
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    transform 0.3s,
+    border 0.3s;
+}
+.tech-wave-mike-new:hover {
+  color: #00ff88;
+  background-color: rgba(0, 255, 136, 0.35);
+  border: 1px solid rgba(0, 255, 136, 1);
 }
 .tech-wave-header {
   font-size: 3.8rem;
@@ -348,6 +367,7 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 .featured-episodes-card-container {
   width: 100%;
   display: flex;
@@ -376,11 +396,12 @@ hr {
 }
 
 .featured-episodes-card-yt-container {
-  max-width: 380px;
+  width: 100%;
+  height: 218px;
 }
 .featured-episodes-card-yt-container iframe {
-  width: 380px;
-  height: 214px;
+  width: 100%;
+  height: 100%;
 }
 .featured-episodes-card-details {
   margin: 24px;
@@ -504,4 +525,181 @@ footer {
 .footer-copyright {
   color: rgb(192, 192, 192);
   font-weight: 300;
+}
+
+/* media for responsive design  */
+@media screen and (max-width: 576px) {
+  /* this is header section */
+  .navbar-container {
+    width: 100%;
+    flex-direction: row;
+    padding: 20px;
+  }
+  .navbar-left-section img {
+    width: 137px;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-right-button {
+    display: none;
+  }
+  .hamburger-logo {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  /* this is main section */
+  .tech-wave-section {
+    width: 100%;
+    height: 466px;
+    background-size: cover;
+    object-fit: contain;
+  }
+  .tech-wave-mike-container {
+    width: 200px;
+    height: 200px;
+  }
+  .tech-wave-mike-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .tech-wave-header {
+    font-size: 2.7rem;
+  }
+  .tech-wave-description {
+    color: rgba(255, 255, 255, 0.785);
+    text-align: center;
+    line-height: 26px;
+  }
+  .about-the-podcast-section {
+    padding: 40px 20px;
+  }
+  .about-the-podcast-head-container {
+    width: 100%;
+  }
+  .about-the-podcast-header {
+    font-size: 2.1rem;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .about-the-podcast-description {
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  .about-the-podcast-description br {
+    display: none;
+  }
+  .about-the-podcast-rating-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .about-the-podcast-rating-card h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    /* the font weight does not get same as the figma font weight as I already applied full weight */
+  }
+  /* this is (why-choose-techWave-section)*/
+  .why-choose-techWave-section {
+    padding: 40px 20px;
+  }
+  .why-choose-techWave-header {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  .why-choose-techWave-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .why-choose-techWave-card {
+    border-radius: 24px;
+    padding: 24px;
+    cursor: pointer;
+  }
+  .featured-episodes-meet-the-host-section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .featured-episodes-header,
+  .meet-the-host-header {
+    font-size: 2rem;
+  }
+  .featured-episodes-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .featured-episodes-card {
+    width: 100%;
+    border-radius: 24px;
+  }
+  .featured-episodes-card-yt-container {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+  }
+  .featured-episodes-card-yt-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .featured-episodes-card-details {
+    margin: 16px;
+  }
+  .Alex-Kumar-card {
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    gap: 16px;
+  }
+  .Alex-Kumar-card-profile-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* footer */
+  footer {
+    width: 100%;
+    height: 248px;
+    overflow: hidden;
+  }
+
+  .footer-section {
+    width: 100%;
+    height: 248px;
+    background-size: c;
+    background-position: top center;
+  }
+  .techwave-footer-container {
+    margin: 0;
+  }
+  .footer-logo {
+    width: 219px;
+  }
+  .footer-socials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
 }
