@@ -15,19 +15,20 @@
 }
 
 header {
-  max-width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
 
   background-color: rgba(26, 11, 46, 1);
 }
 .navbar-container {
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 30px 200px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.211);
 }
 .navbar-left-section img {
   width: 219px;
@@ -107,20 +108,22 @@ main {
 .tech-wave-section {
   max-width: 100%;
   height: 760px;
-  background-image: url("assets/hero-bg.png");
+  /* background-image: url("assets/hero-bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .tech-wave-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 .tech-wave-mike-container {
   width: 350px;
@@ -484,28 +487,29 @@ hr {
 footer {
   margin: 0 auto;
   max-width: 1600px;
-}
-.footer-section {
-  height: 350px;
-  background-image: url("assets/footer-bg.png");
+  /* background-image: url("assets/footer-bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
+
 .techwave-footer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+  position: absolute;
 }
-/* .footer-logo {
-  margin-bottom: 32px;
-} */
+.footer-logo {
+  cursor: pointer;
+}
 .footer-logo-container {
   font-weight: 300;
   color: rgb(192, 192, 192);
@@ -513,6 +517,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 .footer-logo-container img {
   width: 24px;
@@ -534,6 +539,7 @@ footer {
     width: 100%;
     flex-direction: row;
     padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.211);
   }
   .navbar-left-section img {
     width: 137px;
@@ -555,12 +561,26 @@ footer {
   .tech-wave-section {
     width: 100%;
     height: 466px;
-    background-size: cover;
-    object-fit: contain;
+  }
+  .tech-wave-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  .tech-wave-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
   .tech-wave-mike-container {
     width: 200px;
     height: 200px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
   }
   .tech-wave-mike-container img {
     width: 80px;
@@ -569,11 +589,23 @@ footer {
   }
   .tech-wave-header {
     font-size: 2.7rem;
+    margin-top: 24px;
+    text-align: center;
   }
   .tech-wave-description {
     color: rgba(255, 255, 255, 0.785);
     text-align: center;
     line-height: 26px;
+  }
+
+  /* In the (Spotify-subscribe-button-container), flex-wrap: wrap is used so that if the page is opened on a very small device, the buttons wrap and are positioned properly. */
+
+  .Spotify-subscribe-button-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .about-the-podcast-section {
     padding: 40px 20px;
@@ -677,29 +709,154 @@ footer {
     text-align: center;
   }
   /* footer */
+
   footer {
     width: 100%;
-    height: 248px;
-    overflow: hidden;
+    height: 200px;
+  }
+  .footer-bg-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .footer-section {
-    width: 100%;
-    height: 248px;
-    background-size: c;
-    background-position: top center;
-  }
   .techwave-footer-container {
     margin: 0;
+    margin-top: 25px;
   }
   .footer-logo {
     width: 219px;
   }
   .footer-socials-container {
+    width: 255px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    gap: 12px;
+  }
+  .footer-copyright {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /* this is header */
+  .navbar-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-right-section {
+    display: none;
+  }
+  .navbar-left-section {
+    display: none;
+  }
+  .navbar-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    gap: 200px;
+  }
+  .tech-wave-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .tech-wave-mike-container {
+    width: 300px;
+    height: 300px;
+  }
+  .about-the-podcast-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(26, 11, 46, 1);
+  }
+  .about-the-podcast-description br {
+    display: none;
+  }
+  .about-the-podcast-rating-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 24px;
-    margin-bottom: 24px;
-    gap: 16px;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  .why-choose-techWave-section {
+    padding: 40px 20px;
+  }
+  .why-choose-techWave-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    grid-template-areas: none;
+    gap: 30px;
+  }
+  .why-choose-techWave-header {
+    font-size: 2rem;
+  }
+  .featured-episodes-meet-the-host-section {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .featured-episodes-card-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  .featured-episodes-card {
+    width: 100%;
+  }
+  .Alex-Kumar-card {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(37, 13, 68, 1);
+    border-radius: 30px;
+    gap: 24px;
+  }
+  .Alex-Kumar-card-profile-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    width: 300px;
+  }
+  footer {
+    width: 100%;
+    height: 300px;
+  }
+  .footer-bg-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .footer-socials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 32px 0;
   }
 }
