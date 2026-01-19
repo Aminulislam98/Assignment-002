@@ -458,3 +458,50 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
+/* footer */
+footer {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+.footer-section {
+  height: 350px;
+  background-image: url("assets/footer-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.techwave-footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+/* .footer-logo {
+  margin-bottom: 32px;
+} */
+.footer-logo-container {
+  font-weight: 300;
+  color: rgb(192, 192, 192);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.footer-logo-container img {
+  width: 24px;
+}
+.footer-socials-container {
+  display: flex;
+  gap: 35px;
+  margin: 32px 0;
+}
+.footer-copyright {
+  color: rgb(192, 192, 192);
+  font-weight: 300;
+}
