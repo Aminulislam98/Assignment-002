@@ -49,8 +49,16 @@ header {
   font-size: 1rem;
   cursor: pointer;
 }
-.navbar-right-section {
+.navbar-menu-item a {
+  transition: color 0.3s;
 }
+.navbar-menu-item a:hover {
+  color: #fb09b4;
+}
+.navbar-menu-item a:active {
+  color: green;
+}
+
 /* I researched this type of background color and found that it requires a linear-gradient background, which has four components: the first is the direction, and the remaining three are different colors. The Figma assignment file already provided three colors, so I first matched the gradient direction and then applied those three colors accordingly.
 I first tried using my own color, which was almost the same as the original, so I used it at first, but then I decided to change it.
 Thank You Programming Hero Team
@@ -326,7 +334,24 @@ hr {
   border-radius: 40px;
   padding: 40px;
   cursor: pointer;
+  transition:
+    transform 0.3s,
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
+.why-choose-techWave-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background-color: rgba(53, 17, 101, 0.6);
+
+  box-shadow: -2px 0 20px #ffffff96;
+}
+/* up here i added box shadow,transform and transition to get real feel when hover the card  */
+.why-choose-techWave-card:active {
+  transform: translateY(-3px) scale(1);
+  background-color: rgba(255, 255, 255, 0.076);
+}
+/* up here i added active pseudo class  */
+
 .headphone {
   grid-area: headphone;
 }
@@ -395,8 +420,13 @@ hr {
   align-items: flex-start;
   background-color: rgba(37, 13, 68, 1);
   border-radius: 30px;
+  cursor: pointer;
   overflow: hidden;
   /* I used overflow: hidden so the iframe stays inside the card and gets the same rounded corners. Otherwise, the iframe corners would stay mot rounded. */
+  transition: background-color 0.3s;
+}
+.featured-episodes-card:hover {
+  background-color: #9100f847;
 }
 
 .featured-episodes-card-yt-container {
@@ -444,6 +474,20 @@ hr {
   background-color: rgba(37, 13, 68, 1);
   border-radius: 30px;
   gap: 24px;
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    background-color 0.3s;
+}
+.Alex-Kumar-card:hover {
+  transform: translateX(1px) scale(1.01);
+  box-shadow: -2px 0 20px #ffffff96;
+}
+.Alex-Kumar-card:active {
+  transform: translateY(1px) scale(1.02);
+  box-shadow: -2px 0 20px #ffffff96;
+  background-color: #ffffff15;
 }
 .Alex-Kumar-card-profile-photo {
   width: 200px;
@@ -483,6 +527,12 @@ hr {
   justify-content: center;
   align-items: center;
 }
+.Alex-Kumar-social-link-container div:hover {
+  background-color: #b5b5b553;
+}
+.Alex-Kumar-social-link-container div:active {
+  background-color: #c7c7c796;
+}
 
 /* footer */
 footer {
@@ -520,6 +570,12 @@ footer {
   gap: 8px;
   cursor: pointer;
 }
+.footer-logo-container:hover {
+  color: #ffffff;
+}
+.footer-logo-container:active {
+  color: #55ff00;
+}
 .footer-logo-container img {
   width: 24px;
 }
@@ -528,6 +584,7 @@ footer {
   gap: 35px;
   margin: 32px 0;
 }
+
 .footer-copyright {
   color: rgb(192, 192, 192);
   font-weight: 300;
